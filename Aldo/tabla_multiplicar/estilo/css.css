@@ -1,0 +1,25 @@
+body{
+  background: rgb(63,86,251);
+background: linear-gradient(337deg, rgba(63,86,251,1) 12%, rgba(251,63,63,1) 50%, rgba(66,226,82,1) 72%, rgba(252,70,245,1) 100%);}
+
+}
+
+h1{
+  color: rgb(172, 251, 24);
+  font-style: oblique;
+  font-weight: bolder;
+}
+
+h2{
+  color: rgb(172, 251, 24);
+  font-style: oblique;
+  font-weight: bolder;
+  font-size: 40;
+}
+
+input#boton{
+width:150px;
+height:70px;
+background-color: rgb(237, 251, 21);
+color: rgb(58, 4, 194);
+}

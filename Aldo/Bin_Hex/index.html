@@ -1,0 +1,31 @@
+<!DOCTYPE>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/menu.css">
+    <title>¡Menu de Conversiones!</title>
+
+</head>
+
+
+<body>
+	<form style="text-align: center;">
+        <h1>Bienvenido al Convertidor de Numeros Decimales</h1>
+        <h2>Elige una opcion...</h2>
+		<input type="button" id="boton" onClick="abrebinario();" value="Binario"/>
+        <input type="button" id="boton" onclick="abrehexa();" value="Hexadecimal"/>
+	</form>
+
+
+  <script type="text/javascript">
+		function abrebinario(){
+			window.open('VentBinario.html','','toolbar=no, status=no, resizable');
+		}
+        function abrehexa(){
+            window.open('VentHexa.html','','toolbar=no, status=no, resizable');
+        }
+	</script>
+</body>
+</html>

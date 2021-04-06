@@ -1,0 +1,31 @@
+<!DOCTYPE >
+<html>
+<head>
+<title>Funciones básicas</title>
+<link rel="stylesheet" href="css/estilo.css">
+<meta charset="utf-8">
+</head>
+<body>
+
+   <h1>¿Tú número es par? ¡Descúbrelo!</h1>
+   <form >
+     <label> <h2>Introduce el numero</label></h2>
+     <input type="number" name="numero" id="num">
+     <button type="button" onclick="esPar()">¡Verifica el Resultado!</button>
+   </form>
+
+   <script type="text/javascript">
+      function esPar(){
+         numero = document.getElementById("num").value;
+        var resultado;
+
+         if(numero % 2 == 0)
+            resultado  = "par";
+         else
+            resultado = "impar";
+
+         alert("El número "+numero+" es "+resultado);
+      }
+   </script>
+</body>
+</html>

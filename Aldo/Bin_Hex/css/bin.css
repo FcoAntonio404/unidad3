@@ -1,0 +1,30 @@
+body{
+  background: rgb(112,58,180);
+  background: linear-gradient(337deg, rgba(112,58,180,1) 5%, rgba(240,32,230,1) 19%, rgba(240,253,29,1) 68%, rgba(252,237,69,1) 89%);
+}
+
+h1{
+  color: rgb(26, 48, 129);
+  font-style: oblique;
+  font-weight: bolder;
+}
+
+h2{
+  color:rgb(26, 48, 129);
+  font-style: oblique;
+  font-weight: bolder;
+  font-size: 40;
+}
+
+input#boton{
+width:60px;
+height:60px;
+background-color: rgb(237, 251, 21);
+color: rgb(58, 4, 194);
+}
+button#bot{
+  width:100px;
+  height:60px;
+  background-color: rgb(237, 251, 21);
+  color: rgb(58, 4, 194);
+}

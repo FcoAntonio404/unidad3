@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="estilos/estilo.css">
+   <title>Document</title>
+</head>
+
+<body>
+
+   <h1>Programa que verifica si un n&uacute;mero es par</h1>
+   <form>
+      <label>Introduce el numero</label>
+      <input type="text" id="num" name="numero" value="">
+      <button type="button" onclick="esPar()">Verificar</button>
+   </form>
+
+   <script type="text/javascript">
+      function esPar() {
+         var numero = parseInt(document.getElementById("num").value, 10);
+         if (numero != "") {
+            if (Number.isInteger(numero)) {
+               var resultado = parImpar(numero);
+               alert("El número " + numero + " es " + resultado);
+               document.getElementById("num").value = "";
+            }
+            else {
+               alert("El valor no es un número");
+            }
+
+         }
+         else alert("Campo nulo");
+
+      }
+
+      function parImpar(numero) {
+         if (numero % 2 == 0) return "par";
+         else return "impar";
+      }
+   </script>
+</body>
+
+</html>

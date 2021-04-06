@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <title>Conversor de Unidades</title>
+  <link rel="stylesheet" href="css/bin.css">
+</head>
+
+<body>
+    <form style="text-align: center;">
+        <h1>Convierte tus Numeros Decimales a Binarios</h1>
+        <label><h2>Digita tu numero</label></h2>
+        <input type="text" id="num" name="numero" value="">
+        <button type="button" id="bot" onclick="binario(numero.value)">Inicia la Conversion</button>
+        <button type="button" id="bot" onclick="nuevo()">Limpia el ultimo resultado</button>
+        <button type="button" id="bot" onclick="limpiar()">Limpia Todo</button>
+        <input type="button" id="boton"onClick="cierra();" value="Cerrar"/>
+    </form>
+
+    <script type="text/javascript">
+    function nuevo(){
+    parrafo = document.getElementsByTagName('p')[0];
+    parrafo.parentNode.removeChild(parrafo);
+    }
+    function limpiar(){
+        lista=document.querySelectorAll('p');
+        if(lista.length!=0){
+            i=lista.length-1;
+            while(i>-1)
+            lista[i].parentNode.removeChild(lista[i--]);
+        }
+        else alert("No hay nada por borrar...");
+    }
+
+    function binario(numero){
+        if(numero!=""){
+            var cadena = "";
+            while(numero > 0){
+                cadena = (numero % 2) + cadena;
+                numero = Math.floor(numero / 2);
+            }
+            parrafo = document.createElement("p");
+            contenido = document.createTextNode("El numero inicial es "
+            +parseInt(document.getElementById("num").value)+" en binario es "+cadena);  
+            parrafo.appendChild(contenido);
+            document.body.appendChild(parrafo);
+            document.getElementById("num").value="";
+        }else
+        alert("Digita por favor un numero");
+    }
+    function cierra(){
+		if (confirm("¿De verdad quieres salir? Todos tus datos seran borrados")){
+			window.close();
+		}
+	}
+    </script>
+</body>
+</html>

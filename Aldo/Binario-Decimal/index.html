@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <title>Bin-Deci</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilo/style.css">
+    </head>
+
+    <body>
+        <h1>Calculadora de Conversion Decimal to Binario/Hexadecimal</h1>
+        <form align="center">
+            <label><h1>Digita el número a convertir </label></h1>
+            <input type="number" id="num" name="numero" value="">
+            <button type="button" onclick="binario(num.value)">Binario</button>
+            <button type="button" onclick="hexadecimal(num.value)">Hexadecimal</button>
+            <button type="button" onclick="limpiar()">Limpiar Pantalla</button>
+        </form>
+
+        <script type="text/javascript">
+            function limpiar(){
+                lista = document.querySelectorAll('p');
+
+                if(lista.length!=0){
+                    i=lista.length-1;
+                    while(i>-1)
+                        lista[i].parentNode.removeChild(lista[i--]);
+                }
+                else alert("No hay nada para borrar...");
+            }
+
+            function binario(numero){
+                resultado = conversionBinario(numero);
+                parrafo = document.createElement("p");
+                contenido = document.createTextNode("El número "+numero+" en binario es "+resultado);
+                parrafo.appendChild(contenido);
+                document.body.appendChild(parrafo);
+            }
+
+            function hexadecimal(numero){
+                resultado = conversionHexadecimal(numero);
+                parrafo = document.createElement("p");
+                contenido = document.createTextNode("El número "+numero+" en hexadecimal es "+resultado);
+                parrafo.appendChild(contenido);
+                document.body.appendChild(parrafo);
+            }
+
+            function conversionBinario(n){
+                cadena = "";
+                while(n > 0){
+                    cadena += n%2;
+                    n = Math.floor(n / 2);
+                }
+                return cadena.split("").reverse().join("");
+            }
+
+            function conversionHexadecimal(n){
+                cadena = "";
+                residuo = 0;
+                while(n > 0){
+                    residuo = n%16;
+                    switch(residuo){
+                        case 10:
+                            cadena += "A";
+                        break;
+                        case 11:
+                            cadena += "B";
+                        break;
+                        case 12:
+                            cadena += "C";
+                        break;
+                        case 13:
+                            cadena += "D";
+                        break;
+                        case 14:
+                            cadena += "E";
+                        break;
+                        case 15:
+                            cadena += "F";
+                        break;
+                        default:
+                            cadena += residuo;
+                    }
+                    n = Math.floor(n / 16);
+                }
+                return cadena.split("").reverse().join("");
+            }
+        </script>
+    </body>
+</html>

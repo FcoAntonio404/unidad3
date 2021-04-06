@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculadora</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/calcula.css" />
+    <script type="text/javascript" src="js/calcula.js"></script>
+</head>
+
+<body>
+    <h1>Calculadora Cient&iacute;fica</h1>
+    <div class="cont" ALIGN="center">
+        <div class="calculadora">
+            <form action="#" name="calculadora" id="calculadora">
+                <p id="textoPantalla">0</p>
+                <p>
+                    <input type="button" class="principal" value="Retr" onclick="retro()" />
+                    <input type="button" class="principal" value="CE" onclick="borradoParcial()" />
+                    <input type="button" class="principal" value="C" onclick="borradoTotal()" />
+                </p>
+                <hr>
+                <p>
+                    <input type="button" class="op" value="log" onclick="logBase10()" />
+                    <input type="button" class="op" value="1/x" onclick="inve()" />
+                    <input type="button" class="op" value="%" onclick="porcent()" />
+                    <input type="button" class="op" value="+/-" onclick="opuest()" />
+                    <input type="button" class="op" value="³√" onclick="raizCubica()" />
+                    <input type="button" class="op" value="xⁿ" onclick="operar('**')" />
+                </p>
+                <p>
+                    <input type="button" class="op" value="ln" onclick="logNaturalBase10()" />
+                    <input type="button" class="op" value="7" onclick="numero('7')" id="num" />
+                    <input type="button" class="op" value="8" onclick="numero('8')" id="num" />
+                    <input type="button" class="op" value="9" onclick="numero('9')" id="num" />
+                    <input type="button" class="op" value="√" onclick="raizc()" />
+                    <input type="button" class="op" value="x²" onclick="potencia()" />
+                </p>
+                <p>
+                    <input type="button" class="op" value="Sin" onclick="seno()" />
+                    <input type="button" class="op" value="4" onclick="numero('4')" id="num" />
+                    <input type="button" class="op" value="5" onclick="numero('5')" id="num" />
+                    <input type="button" class="op" value="6" onclick="numero('6')" id="num" />
+                    <input type="button" class="op" value="*" onclick="operar('*')" />
+                    <input type="button" class="op" value="/" onclick="operar('/')" />
+                </p>
+                <p>
+                    <input type="button" class="op" value="Cos" onclick="coseno()" />
+                    <input type="button" class="op" value="1" onclick="numero('1')" id="num" />
+                    <input type="button" class="op" value="2" onclick="numero('2')" id="num" />
+                    <input type="button" class="op" value="3" onclick="numero('3')" id="num" />
+                    <input type="button" class="op" value="+" onclick="operar('+')" />
+                    <input type="button" class="op" value="-" onclick="operar('-')" />
+                </p>
+                <p>
+                    <input type="button" class="op" value="Tan" onclick="tangente()" />
+                    <input type="button" class="op" value="0" onclick="numero('0')" id="num" />
+                    <input type="button" class="op" value="." onclick="numero('.')" id="num" />
+                    <input type="button" class="op" value="π" onclick="numero('3.141592653589793')" />
+                    <input type="button" class="op" value="e" onclick="numero('2.718281828459045')" />
+                    <input type="button" class="op" value="=" onclick="igualar()" />
+                </p>
+                <p class="funciones">
+                    <input type="button" class="conversion" value="Bin" onclick="convertirBinario()" />
+                    <input type="button" class="conversion" value="Oct" onclick="convertirOctal()" />
+                    <input type="button" class="conversion" value="Hex" onclick="convertirHexadecimal()" />
+
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

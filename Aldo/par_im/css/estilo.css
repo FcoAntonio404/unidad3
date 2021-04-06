@@ -1,0 +1,26 @@
+body{
+background: rgb(112,58,180);
+background: linear-gradient(337deg, rgba(112,58,180,1) 5%, rgba(213,38,219,1) 16%, rgba(240,32,230,1) 27%, rgba(147,113,237,1) 29%, rgba(100,154,240,1) 34%, rgba(89,128,238,1) 44%, rgba(83,112,236,1) 50%, rgba(72,83,233,1) 61%, rgba(215,236,66,1) 62%, rgba(238,112,114,1) 71%, rgba(253,29,240,1) 77%, rgba(253,79,199,1) 82%, rgba(252,237,69,1) 98%);
+text-align: center;
+}
+
+
+h1{
+  color: rgb(26, 48, 129);
+  font-style: oblique;
+  font-weight: bolder;
+}
+
+h2{
+  color:rgb(26, 48, 129);
+  font-style: oblique;
+  font-weight: bolder;
+  font-size: 40;
+}
+
+input#boton{
+width:100px;
+height:100px;
+background-color: rgb(237, 251, 21);
+color: rgb(58, 4, 194);
+}

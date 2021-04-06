@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<head>
+  <link rel="stylesheet" href="estilos/estilo.css">
+  <title>Conversor de Unidades</title>
+  <style>
+    p {
+      text-align: center;
+      color: rgb(0, 0, 0);
+    }
+  </style>
+</head>
+
+<body>
+  <form style="text-align: center;">
+    <h1>Decimales a hexadecimal</h1>
+    <label>Introduce el n&uacute;mero decimal</label><br>
+    <input type="text" id="num" name="numero" value="">
+    <button type="button" onclick="hexa(numero.value)">A Hexadecimal</button>
+    <button type="button" onclick="nuevo()">Limpiar</button>
+    <button type="button" onclick="limpiar()">Limpiar Todos</button>
+    <input type="button" onClick="cierra();" value="Cerrar" />
+  </form>
+
+  <script type="text/javascript">
+    function nuevo() {
+      parrafo = document.getElementsByTagName('p')[0];
+      parrafo.parentNode.removeChild(parrafo);
+    }
+    function limpiar() {
+      lista = document.querySelectorAll('p');
+      if (lista.length != 0) {
+        i = lista.length - 1;  // posiciona en el último párrafo creado
+        while (i > -1)
+          lista[i].parentNode.removeChild(lista[i--]);
+      }
+      else alert("No hay párrafos a eliminar");
+    }
+    //Decimal a Hexadecimal
+    function hexa(numero) {
+      if (numero != "") {
+        var cadena = "";
+        var residuo = 0;
+        while (numero > 0) {
+          residuo = numero % 16;
+          if (residuo > 9) {
+            switch (residuo) {
+              case 10: cadena = "A" + cadena; break;
+              case 11: cadena = "B" + cadena; break;
+              case 12: cadena = "C" + cadena; break;
+              case 13: cadena = "D" + cadena; break;
+              case 14: cadena = "E" + cadena; break;
+              case 15: cadena = "F" + cadena; break;
+            }
+            numero = Math.floor(numero / 16);
+          } else {
+            cadena = residuo + cadena;
+            numero = Math.floor(numero / 16);
+          }
+        }
+        parrafo = document.createElement("p");
+        contenido = document.createTextNode("El número decimal "
+          + parseInt(document.getElementById("num").value) + " en hexadecimal es " + cadena);
+        parrafo.appendChild(contenido);
+        document.body.appendChild(parrafo);
+        document.getElementById("num").value = "";
+      } else
+        alert("Ingresa un valor en el campo");
+    }
+    function cierra() {
+      if (confirm("¿Quieres cerrar la ventana?")) {
+        window.close();
+      }
+    }
+  </script>
+</body>
+
+</html>

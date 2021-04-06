@@ -1,0 +1,94 @@
+body {
+  background-image: url("../img/fondo.jpg");
+  background-size: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  font-size: initial;
+  text-align: center;
+}
+
+h1 {
+  background-color: rgb(0, 0, 0);
+  color: rgb(249, 249, 249);
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 10px;
+}
+
+.funciones {
+  color: rgb(249, 249, 249);
+  font-size: 1.2rem;
+}
+
+/*aspectos generales: bordes y color de fondo de calculadora*/
+.calculadora {
+  border-radius: 10px;
+  padding: 15px;
+  width: 400px;
+  text-align: center;
+  background-color: #255350f3;
+}
+
+/*pantalla de visualizaciÃ³n: bordes, posiciÃ³n, color de fondo, estilo letra.*/
+#textoPantalla {
+  border-radius: 4px;
+  font-size: 1.5rem;
+  text-align: right;
+  left: 30px;
+  padding: 5px 5px;
+  background-color: rgb(206, 232, 233);
+  overflow: hidden;
+}
+
+/*botones normales: anchura y margen*/
+.calculadora [type="button"] {
+  background-color: rgb(206, 232, 233);
+  width: 50px;
+  height: 30px;
+  border-radius: 10px;
+  font-weight: bolder;
+  font-size: 16px;
+  transition: width 0.5s, height 0.5s, transform 0.5s;
+}
+.calculadora input.op:hover {
+  background-color: #16b5e6cb;
+  color: white;
+  transform: scale(1.05);
+}
+.calculadora input.op:active {
+  background-color: #4ad42ecb;
+  color: white;
+}
+
+/*botones especiales*/
+.calculadora input.principal {
+  color: #d1c5c5;
+  background-color: #ab2f2f;
+  margin: 3px;
+  width: 100px;
+  font-weight: bold;
+  transition: width 0.5s, height 0.5s, transform 0.5s;
+}
+
+.calculadora input.principal:hover {
+  background-color: #e7893c;
+  color: white;
+  transform: scale(1.05);
+}
+/*botones conversión*/
+.calculadora input.conversion {
+  color: #ffffff;
+  background-color: #208b8f;
+  margin: 3px;
+  width: 100px;
+  height: 30px;
+  font-weight: bold;
+  transition: width 0.5s, height 0.5s, transform 0.5s;
+}
+
+.calculadora input.conversion:hover {
+  background-color: #e7893c;
+  color: white;
+  transform: scale(1.05);
+}

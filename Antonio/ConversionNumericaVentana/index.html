@@ -1,0 +1,33 @@
+<!DOCTYPE>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="PQG">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos/estilo.css">
+  <title>Men&uacute; de conversi&oacute;n</title>
+
+</head>
+
+<body>
+  <div>
+    <form style="text-align: center;">
+      <h1>Conversi&oacute;n de n&uacute;meros decimales</h1><br>
+      <input type="button" onClick="abrebinario();" value="Binario" />
+      <input type="button" onclick="abrehexa();" value="Hexadecimal">
+    </form>
+  </div>
+
+  <script type="text/javascript">
+    function abrebinario() {
+      window.open('VentBinario.html', '', 'toolbar=no, status=no, resizable');
+    }
+    function abrehexa() {
+      window.open('VentHexa.html', '', 'toolbar=no, status=no, resizable');
+    }
+  </script>
+</body>
+
+</html>
